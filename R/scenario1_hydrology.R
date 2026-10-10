@@ -1,0 +1,27 @@
+# Portable adaptation of recovered diagnostics; original data not available.
+args <- commandArgs(trailingOnly = TRUE)
+if (length(args) != 2L) stop("Usage: Rscript R/scenario1_hydrology.R DATA_FILE OUTPUT_DIRECTORY")
+library(forecast)
+library(tseries)
+x <- scan(args[1], quiet = TRUE)
+if (length(x) < 36L || any(!is.finite(x))) stop("Expected at least 36 finite monthly observations")
+hydro_ts <- ts(x, frequency = 12)
+dir.create(args[2], recursive = TRUE, showWarnings = FALSE)
+pdf(file.path(args[2], "diagnostics.pdf"))
+par(mfrow = c(2, 1))
+acf(hydro_ts); pacf(hydro_ts)
+print(adf.test(hydro_ts))
+fit <- auto.arima(hydro_ts, seasonal = TRUE)
+print(summary(fit))
+checkresiduals(fit)
+qqnorm(residuals(fit)); qqline(residuals(fit))
+pred <- forecast(fit, h = 24, level = 95)
+par(mfrow = c(1, 1))
+plot(pred, main = "24-month water-level forecast", ylab = "Water level")
+dev.off()
+write.table(as.numeric(pred$mean), file.path(args[2], "forecast.txt"),
+            row.names = FALSE, col.names = FALSE)
+write.csv(data.frame(step = 1:24, mean = as.numeric(pred$mean),
+                     lower95 = as.numeric(pred$lower[, 1]), upper95 = as.numeric(pred$upper[, 1])),
+          file.path(args[2], "intervals.csv"), row.names = FALSE)
+capture.output(sessionInfo(), file = file.path(args[2], "session-info.txt"))
