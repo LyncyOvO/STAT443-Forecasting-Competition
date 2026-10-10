@@ -46,4 +46,4 @@ The saved `forecast2` matrix is only the initialization sequence 1–400, not a 
 
 `manifest.json` records the source-workspace SHA-256, each exported file's SHA-256, source object, dimensions, and missing-value count. Exports were read back and compared against the decoded source values. The original workspace was not committed: it also contains personal identifiers, local paths, unrelated coursework, and model/intermediate objects.
 
-Model outputs have not been recomputed in R. Scenario 3–4 source scripts are still missing. The project author supplied these course data; no additional data license is granted.
+Scenarios 1 and 5 have now been recomputed in R; see [the rerun results](../results/2026-10-11/README.md). Scenario 3–4 source scripts are still missing. The project author supplied these course data; no additional data license is granted.

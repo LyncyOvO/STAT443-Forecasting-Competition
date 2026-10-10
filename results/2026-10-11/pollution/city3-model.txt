@@ -1,0 +1,16 @@
+Series: city_ts 
+ARIMA(1,1,1)(0,0,2)[48] with drift 
+
+Coefficients:
+         ar1     ma1    sma1   sma2    drift
+      0.2804  0.0295  0.1565  0.082  -0.0057
+s.e.  0.0598  0.0617  0.0201  0.019   0.2843
+
+sigma^2 = 66.24:  log likelihood = -8938.59
+AIC=17889.18   AICc=17889.21   BIC=17924.22
+
+Training set error measures:
+                       ME     RMSE      MAE        MPE     MAPE      MASE
+Training set 9.530315e-05 8.129474 4.788826 -0.3472493 7.696077 0.1831559
+                    ACF1
+Training set 0.000114922

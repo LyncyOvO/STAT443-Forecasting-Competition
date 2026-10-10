@@ -20,13 +20,14 @@ This package contains recovered code for **scenarios 1, 2, and 5**, plus portabl
 - `R/`: portable adaptations prepared in October 2026; distinct from original code.
 - `archive/`: recovered historical snippets, with original assumptions and limitations.
 - `report/stat443-final.pdf`: original report, preserved unchanged.
+- `results/2026-10-11/`: verified R rerun outputs, logs, diagnostics, and package versions.
 - `docs/RECOVERY.md`: source locations, changes, and methodological limitations.
 
 ## Data and execution
 
 Selected input datasets have been recovered from the author's saved `.RData` workspace and are included in `data/`. Water levels and all three pollution series are available, along with beer and four related series. The 40-stock dataset remains incomplete: only one unidentified series was recovered. See [data/README.md](data/README.md) for the inventory, reading instructions, and limitations.
 
-Exported values, dimensions, and missingness were checked against the saved objects. No forecasting model has been rerun in this recovery environment, which has no R installation. Package versions from 2024 are unknown.
+Exported values, dimensions, and missingness were checked against the saved objects. **Scenarios 1 and 5 were rerun successfully in R on 11 October 2026 (Singapore)** using R 4.3.3, forecast 8.21.1, and tseries 0.10-55. The run produced 24 water-level forecasts and a 336-by-3 pollution forecast matrix, plus 95% intervals and diagnostics. See [the rerun record and outputs](results/2026-10-11/README.md). Output-integrity checks passed; this is not an out-of-sample accuracy evaluation. Package versions from the original 2024 submission remain unknown.
 
 Install the required packages in R:
 

@@ -1,0 +1,101 @@
+{
+  "source_commit": "719f06d0e3c660d9d4059152af68177668468ebc",
+  "date_timezone": "Asia/Singapore",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "63c66c53ca4b7552519d79d41cb995df36fa3295fae05574f07fd9d84a09d0f3",
+      "bytes": 3778
+    },
+    {
+      "path": "hydrology/diagnostics.pdf",
+      "sha256": "8acc737d58efba9119e1cd97bc42af30580b79b7edb5d8b75ad26c5982a2fa31",
+      "bytes": 89636
+    },
+    {
+      "path": "hydrology/forecast.txt",
+      "sha256": "02720eb86bd04a40d9085785837c608e5bdc84b7e8584d8cf3f240f0c3146dc5",
+      "bytes": 405
+    },
+    {
+      "path": "hydrology/intervals.csv",
+      "sha256": "f1df83173a598caffe52f74b127369da1d63b88ddfc881617c35fd541d895b5d",
+      "bytes": 1312
+    },
+    {
+      "path": "hydrology/run.log",
+      "sha256": "5e5a981f1dbcb96b2792e5660ddd2875f246355f7fe72c467a778b6cca4c6c45",
+      "bytes": 872
+    },
+    {
+      "path": "hydrology/session-info.txt",
+      "sha256": "bd5651d265698862ecc3bed91be5db0746d80a7d008514654eeb4e9779c7f6b8",
+      "bytes": 1547
+    },
+    {
+      "path": "pollution/city1-diagnostics.pdf",
+      "sha256": "8abef2ffab4756a8c658d1b7064707d4ae5786ea96455405fd2369a103621536",
+      "bytes": 193269
+    },
+    {
+      "path": "pollution/city1-intervals.csv",
+      "sha256": "bf0303191bd11059e2ba86c4f48f0670279a3f041475ea4dd351739e29613ce2",
+      "bytes": 18893
+    },
+    {
+      "path": "pollution/city1-model.txt",
+      "sha256": "955c5f5d285f15e5f2ba433c16814948ccd3d9c441cb4e79650169157fd50a45",
+      "bytes": 540
+    },
+    {
+      "path": "pollution/city2-diagnostics.pdf",
+      "sha256": "e3920469a0ac4e382a65fdbd588774ad6b1b2945e7bd70bbee182fe11f839727",
+      "bytes": 192329
+    },
+    {
+      "path": "pollution/city2-intervals.csv",
+      "sha256": "79107423f0b7dcc93c823f84d3cb90a7425d155a8456f3be36ab634a496b06aa",
+      "bytes": 18628
+    },
+    {
+      "path": "pollution/city2-model.txt",
+      "sha256": "89cf0662793c3a9adff67262419a352116378c4b805eb9b12e17d57e71057e8c",
+      "bytes": 585
+    },
+    {
+      "path": "pollution/city3-diagnostics.pdf",
+      "sha256": "e1628f4a5e813de2ec98489bff7363074ceedb6231f86f9620fbc0a86546ce34",
+      "bytes": 192848
+    },
+    {
+      "path": "pollution/city3-intervals.csv",
+      "sha256": "56c770122d0d733c62bdd643b38461befc4de022589e3f7859d7bcb6154f751a",
+      "bytes": 18626
+    },
+    {
+      "path": "pollution/city3-model.txt",
+      "sha256": "7820f33336f3e71c62968751e22dfe7feabe863f43ad9a0bb01e1bec9c68fa4e",
+      "bytes": 520
+    },
+    {
+      "path": "pollution/forecast.txt",
+      "sha256": "421391ba543bec141b2f6368d88d52c0e9b5ed0645aaba98f469994aefdf9afa",
+      "bytes": 17046
+    },
+    {
+      "path": "pollution/run.log",
+      "sha256": "df5032d921d03e27b97327f977d5d4ecda1c1ac4c989e96c2cd4cf025fb0531a",
+      "bytes": 550
+    },
+    {
+      "path": "pollution/session-info.txt",
+      "sha256": "ae67fd78be521582c8f94281bc4b1af9e497479b821369a9b697ab87b4aa242b",
+      "bytes": 1549
+    },
+    {
+      "path": "validation.txt",
+      "sha256": "dbc5412e8bd9b82c5496069928ae677265124ec67b245833ed00e614359cc251",
+      "bytes": 222
+    }
+  ]
+}

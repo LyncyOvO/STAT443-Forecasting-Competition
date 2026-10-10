@@ -24,7 +24,7 @@ The historical backtest examples fit on the full return series, do not reserve o
 
 Likewise, a nonsignificant Ljung–Box test does not prove residual independence or normality. The original report sometimes overstates these conclusions. It has been kept as a historical artifact, not silently rewritten.
 
-## Verification and remaining work
+## Initial verification and remaining work (before the R rerun)
 
 Extraction boundaries and text transformations were checked. R is unavailable in this environment, so syntax has not been checked by R and no model has been run. The complete stock dataset, 2024 package versions, and scenario 3–4 scripts are still needed for full reproduction; see the workspace recovery update below. No new replacement code for the missing scenarios was invented.
 
@@ -46,4 +46,14 @@ The saved `hydrology_data` object now independently confirms 576 observations. T
 
 `stock_data` contains one embedded `Value` header followed by 150 numeric observations. Only that header was removed, and the result is explicitly labeled unidentified: the saved loop index and filenames do not establish a reliable stock number. `stock_ts` contains integer codes and is not substituted for the numeric input. `forecast2` is exactly the initialization sequence 1–400 in a 10-by-40 matrix, not completed forecasts; it was excluded. Saved forecast and imputation objects were not promoted into raw inputs.
 
-All exported numeric values were checked by reading the output back and comparing element by element; dates, dimensions, and missingness were also verified. Model execution in R remains unverified.
+All exported numeric values were checked by reading the output back and comparing element by element; dates, dimensions, and missingness were also verified. Model execution was subsequently completed for scenarios 1 and 5; see the R rerun below.
+
+## R rerun — 11 October 2026 (Singapore)
+
+Scenarios 1 and 5 were executed successfully from source commit `719f06d0e3c660d9d4059152af68177668468ebc` without changing model code or inputs. R 4.3.3 and the required Ubuntu R packages were downloaded into an isolated local runtime; forecast 8.21.1 and tseries 0.10-55 were used. Full session information, console logs, numeric outputs, and diagnostic PDFs are committed under `results/2026-10-11/`.
+
+The 24 water-level forecasts and 336-by-3 pollution forecasts passed finite-value, dimension, step-order, interval-order, and cross-file consistency checks. Input checksums matched the recovered-data manifest. All four diagnostic PDFs were rendered and visually inspected. `R/validate_results.R` reproduces output-integrity checks without fitting models again.
+
+The water model matches the report's SARIMA(2,0,0)(1,1,0)[12] order. All four residual Ljung-Box tests have p-values below 0.05, so the rerun does not support claiming residual white noise. Pollution intervals frequently extend below zero; these unbounded Gaussian-model intervals were preserved unchanged. City 1 contains three zero observations, making its reported percentage-error metrics infinite. No held-out data or original submitted forecast files were available for an accuracy or exact historical-output comparison. Full details and selected models are in the results README.
+
+Scenario 2 remains blocked by incomplete stock inputs. Scenarios 3 and 4 have recovered data but no recovered executable source scripts; no replacement models were invented for this rerun.

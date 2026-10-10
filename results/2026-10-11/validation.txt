@@ -1,0 +1,3 @@
+PASS: hydrology has 24 finite forecasts and consistent 95% intervals.
+PASS: pollution has 336 x 3 finite forecasts and consistent 95% intervals.
+These checks validate output integrity, not out-of-sample forecast accuracy.

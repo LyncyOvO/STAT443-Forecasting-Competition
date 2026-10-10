@@ -1,0 +1,36 @@
+Registered S3 method overwritten by 'quantmod':
+  method            from
+  as.zoo.data.frame zoo 
+
+	Augmented Dickey-Fuller Test
+
+data:  hydro_ts
+Dickey-Fuller = -2.3118, Lag order = 8, p-value = 0.4463
+alternative hypothesis: stationary
+
+Series: hydro_ts 
+ARIMA(2,0,0)(1,1,0)[12] 
+
+Coefficients:
+         ar1      ar2     sar1
+      1.1551  -0.2188  -0.5249
+s.e.  0.0412   0.0411   0.0357
+
+sigma^2 = 0.2325:  log likelihood = -390.28
+AIC=788.55   AICc=788.63   BIC=805.89
+
+Training set error measures:
+                      ME    RMSE       MAE         MPE     MAPE      MASE
+Training set 0.003071355 0.47582 0.3484948 -0.02807518 2.358077 0.2985558
+                     ACF1
+Training set -0.008252607
+
+	Ljung-Box test
+
+data:  Residuals from ARIMA(2,0,0)(1,1,0)[12]
+Q* = 107.98, df = 21, p-value = 1.089e-13
+
+Model df: 3.   Total lags used: 24
+
+null device 
+          1 
