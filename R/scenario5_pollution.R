@@ -1,4 +1,4 @@
-# Portable adaptation of recovered Scenario 5 code; original data unavailable.
+# Portable adaptation of recovered Scenario 5 code; recovered inputs are in data/city1.txt through data/city3.txt.
 args <- commandArgs(trailingOnly = TRUE)
 if (length(args) != 4L) {
   stop("Usage: Rscript R/scenario5_pollution.R CITY1_FILE CITY2_FILE CITY3_FILE OUTPUT_DIRECTORY")

@@ -26,7 +26,7 @@ Likewise, a nonsignificant Ljung–Box test does not prove residual independence
 
 ## Verification and remaining work
 
-Extraction boundaries and text transformations were checked. R is unavailable in this environment, so syntax has not been checked by R and no model has been run. Raw datasets, 2024 package versions, and scenario 3–4 scripts are still needed for full reproduction. No new replacement code for the missing scenarios was invented.
+Extraction boundaries and text transformations were checked. R is unavailable in this environment, so syntax has not been checked by R and no model has been run. The complete stock dataset, 2024 package versions, and scenario 3–4 scripts are still needed for full reproduction; see the workspace recovery update below. No new replacement code for the missing scenarios was invented.
 
 ## Second excerpt
 
@@ -37,3 +37,13 @@ The portable adapter adds explicit file inputs, finite-value validation, 95% int
 The second excerpt also contains a later GitHub proposal and example hydrology code. Its suggested CSV header `Value`, 576-observation claim, and exhaustive-search options are not treated as verified properties of the original dataset or original submission. Scenario 3–4 code is still absent; mentions in prose and suggested directory trees are not code recovery.
 
 Generic plotting suggestions subtract `actual_city*` and `forecast_city*` without proving that they cover the same times. They were not promoted into an accuracy evaluation. Diagnostics use fitted residuals; no held-out performance is claimed.
+
+## Workspace data recovery — 11 October 2026 (Singapore)
+
+The author supplied a saved `.RData` workspace. Selected project input objects were decoded and exported into `data/`; the full workspace was not committed because it also contains personal identifiers, local paths, unrelated coursework, fitted models, and intermediate state. See `data/README.md` and `data/manifest.json` for object names, shapes, missingness, and checksums.
+
+The saved `hydrology_data` object now independently confirms 576 observations. Three `pollutionCity*` objects each contain 2,544 observations. Beer has 435 rows and 30 missing values; its auxiliary series preserve their original dates and lengths. No imputation or alignment was applied during export.
+
+`stock_data` contains one embedded `Value` header followed by 150 numeric observations. Only that header was removed, and the result is explicitly labeled unidentified: the saved loop index and filenames do not establish a reliable stock number. `stock_ts` contains integer codes and is not substituted for the numeric input. `forecast2` is exactly the initialization sequence 1–400 in a 10-by-40 matrix, not completed forecasts; it was excluded. Saved forecast and imputation objects were not promoted into raw inputs.
+
+All exported numeric values were checked by reading the output back and comparing element by element; dates, dimensions, and missingness were also verified. Model execution in R remains unverified.

@@ -1,0 +1,86 @@
+{
+  "source_filename": ".RData",
+  "source_sha256": "37ff62d59a38f6872748226c5b6d2269c1f1e6d3f33723ed331c264a680643db",
+  "files": [
+    {
+      "file": "data/hydrology.txt",
+      "source_object": "hydrology_data",
+      "rows": 576,
+      "columns": 1,
+      "missing_values": 0,
+      "sha256": "481cbe25a6efb9aeaba2e4265b79bb8b8c4b4eb966888891de99a8be2413771d"
+    },
+    {
+      "file": "data/city1.txt",
+      "source_object": "pollutionCity1",
+      "rows": 2544,
+      "columns": 1,
+      "missing_values": 0,
+      "sha256": "2b67129e4e9ad72d8b678da5b13be0631e167528e9e6f54cf54617dad6960666"
+    },
+    {
+      "file": "data/city2.txt",
+      "source_object": "pollutionCity2",
+      "rows": 2544,
+      "columns": 1,
+      "missing_values": 0,
+      "sha256": "faea099c85037f51eac160183929ba1eed772d746cc4ec7908597855ef2e7fb9"
+    },
+    {
+      "file": "data/city3.txt",
+      "source_object": "pollutionCity3",
+      "rows": 2544,
+      "columns": 1,
+      "missing_values": 0,
+      "sha256": "30c5dcd47603ce36054ecb5db6d1f39c642119bd8e8812761a8c3ec5e8fa6250"
+    },
+    {
+      "file": "data/beer/beer.csv",
+      "source_object": "beer",
+      "rows": 435,
+      "columns": 2,
+      "missing_values": 30,
+      "sha256": "db58a914875ebe262e3b8dfb8dbb6a7fb44d34ceb39c854f0a2873ce3b5aa255"
+    },
+    {
+      "file": "data/beer/temperature.csv",
+      "source_object": "temperature",
+      "rows": 581,
+      "columns": 3,
+      "missing_values": 0,
+      "sha256": "8085689d46e878636474d24fc601aff89cf9230323210c7c0b607be89042af69"
+    },
+    {
+      "file": "data/beer/car.csv",
+      "source_object": "car",
+      "rows": 369,
+      "columns": 2,
+      "missing_values": 0,
+      "sha256": "42ebd2c59322bc462afc1f08437a65e5fc8b45280125b050f738bcd3cbf50d84"
+    },
+    {
+      "file": "data/beer/gas.csv",
+      "source_object": "gas",
+      "rows": 435,
+      "columns": 2,
+      "missing_values": 0,
+      "sha256": "6ea2139f07babd9bccf91652342e1ed71b7da8100f7084f035d44788d6631c22"
+    },
+    {
+      "file": "data/beer/electricity.csv",
+      "source_object": "electricity",
+      "rows": 435,
+      "columns": 2,
+      "missing_values": 0,
+      "sha256": "8c76886e58b68f8c4be479667d27094bcf41fd24e9eaf36e924c2d1f78082823"
+    },
+    {
+      "file": "data/stocks-partial/unidentified-stock.txt",
+      "source_object": "stock_data (first embedded Value header removed)",
+      "rows": 150,
+      "columns": 1,
+      "missing_values": 0,
+      "sha256": "2ba26d97334ec49588f820119ade94ffc4b117a8ff90ca6ac7ef15c9f1d1507e"
+    }
+  ]
+}

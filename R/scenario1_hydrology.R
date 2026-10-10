@@ -1,4 +1,4 @@
-# Portable adaptation of recovered diagnostics; original data not available.
+# Portable adaptation of recovered diagnostics; recovered input is in data/hydrology.txt.
 args <- commandArgs(trailingOnly = TRUE)
 if (length(args) != 2L) stop("Usage: Rscript R/scenario1_hydrology.R DATA_FILE OUTPUT_DIRECTORY")
 library(forecast)
